@@ -1,0 +1,57 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile" : false,
+    "babelOptions" : {
+      "babelrc": false,
+      "configFile": false,
+      // // your babel options
+      "presets": ["@babel/preset-react"]
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx" : true
+    }
+  },
+  "env":{
+    "browser": true,
+    "node" : true,
+    "es6" : true
+  },
+  "extends":[
+    "airbnb"
+  ],
+  "plugins": [
+    "import",
+    "react-hooks"
+  ],
+  "rules": {
+    "no-param-reassign":0,
+    "no-sequences":0,
+    "default-param-last":0,
+    "react/jsx-one-expression-per-line":1,
+    "react/no-array-index-key":1,
+    "object-curly-newline":0,
+    "operator-linebreak":0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "react/prop-types":1,
+    "react/forbid-prop-types":0,
+    "no-console":0,
+    "linebreak-style":0,
+    "semi":0,
+    "jsx-a11y/anchor-is-valid":1,
+    "import/order": [
+      "error",
+       {
+          "groups": [
+            ["builtin", "external"],
+            ["index", "sibling", "parent", "internal", "object", "type"]
+          ]
+        }
+     ],
+    "react/function-component-definition":[2, {"namedComponents":"arrow-function"}],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+  }
+}
