@@ -43,10 +43,10 @@ const About = () => {
   )
 }
 
-export const getStaticProps = wrapper.getStaticProps(async (context) => {
-  context.store.dispatch(loadUserRequest(2))
-  context.store.dispatch(END)
-  await context.store.sagaTask.toPromise()
-})
+// export const getStaticProps = wrapper.getStaticProps(async (context) => {
+//   context.store.dispatch(loadUserRequest(2))
+//   context.store.dispatch(END)
+//   await context.store.sagaTask.toPromise()
+// })
 
 export default About
