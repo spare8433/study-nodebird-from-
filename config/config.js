@@ -1,4 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-const serverAddress = '54.180.113.254'
+const serverAddress = 'api.spare8433.kro.kr'
 
-export const backUrl = `https://${serverAddress}`
+export const backUrl = `http://${serverAddress}`
