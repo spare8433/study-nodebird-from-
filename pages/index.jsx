@@ -49,6 +49,7 @@ const Home = () => {
 }
 
 export const getServerSideProps = wrapper.getServerSideProps(async (context) => {
+  console.log('getServerSideProps start');
   const cookie = context.req ? context.req.headers.cookie : ''
 
   if (context.req && cookie) { // 서버쪽 쿠키 공유 버그
@@ -58,6 +59,7 @@ export const getServerSideProps = wrapper.getServerSideProps(async (context) => 
   context.store.dispatch(loadMyInfoRequest())
   context.store.dispatch(loadPostsRequest())
   context.store.dispatch(END)
+  console.log('getServerSideProps end');
   await context.store.sagaTask.toPromise()
 })
 export default Home
