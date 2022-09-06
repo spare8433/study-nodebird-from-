@@ -2,7 +2,6 @@ import { Button, Form, Input } from 'antd'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { backUrl } from '../config/config'
 import { addPostRequest, removeImage, uploadImagesRequest } from '../reducers/post'
 
 const FormWrapper = styled(Form)`
@@ -72,7 +71,7 @@ const PostForm = () => {
       <div>
         {imagePaths.map((v, i) => (
           <div key={v} style={{ display: 'inline-block' }}>
-            <img src={`${backUrl}/${v}`} alt={v} style={{ width: '200px' }} />
+            <img src={v} alt={v} style={{ width: '200px' }} />
             <div>
               <Button onClick={onRemoveImage(i)}>제거</Button>
             </div>
