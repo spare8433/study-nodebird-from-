@@ -226,7 +226,7 @@ const reducer = (state = initalState, action) => produce(state, (draft) => {
     case UPLOAD_IMAGES_SUCCESS:
       draft.uploadImagesDone = true
       draft.uploadImagesLoading = false
-      draft.imagePaths = action.data
+      draft.imagePaths = draft.imagePaths.concat(action.data)
       break
     case UPLOAD_IMAGES_FAILURE:
       draft.uploadImagesLoading = false
